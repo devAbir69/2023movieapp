@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Oswald", serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+nav {
+    background: #232f3e;
+    color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 18px;
+}
+
+.search-container input, .search-container button {
+    padding: 10px 15px;
+    border: none;
+    font-size: 16px;
+}
+
+.search-container input {
+    border-radius: 4px 0 0 4px;
+    outline: none;
+}
+
+.search-container button {
+    border-radius: 0 4px 4px 0;
+    background: yellow; /* Set background to yellow */
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.search-container button:hover {
+    background: #ffcc00; /* Slightly darker yellow on hover */
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-block: 38px;
+    background: none; /* Remove any background from main */
+}
+
+main section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 70vh;
+}
+
+.movie-container {
+    display: flex;
+    justify-content: center;
+    background: #ffffff; /* Ensure background is white */
+    box-shadow: 0px 0px 10px gainsboro;
+    width: 70%;
+    border-radius: 5px;
+    margin: 20px auto; /* Center the container and add margin */
+    overflow: hidden; /* Ensure content doesn't overflow */
+}
+
+.movie-info {
+    padding-inline: 15px;
+    flex: 1; /* Allow movie-info to take available space */
+    background: #ffffff; /* Ensure the background is white */
+}
+
+.movie-info h2 {
+    text-align: center;
+    font-size: 32px;
+    margin: 20px 0 12px 0; /* Fixed margin property */
+    color: #232f3e; /* Change text color */
+}
+
+.movie-info h2 + p {
+    text-align: center;
+    font-size: 18px; /* Adjust font size */
+    color: #555; /* Change text color */
+}
+
+.movie-info .movie-genre {
+    display: flex;
+    justify-content: center;
+    margin-block: 20px;
+}
+
+.movie-info p {
+    font-size: 18px;
+    margin-block: 10px;
+    line-height: 24px;
+}
+
+.movie-info .movie-genre p {
+    background: #232f3e;
+    color: #f4f4f4;
+    padding: 5px 10px;
+    margin-inline: 5px;
+    border: 2px solid #232f3e;
+    border-radius: 5px;
+    font-weight: 700;
+    display: inline-block; /* Ensure genres are inline */
+}
+
+.movie-poster {
+    flex-shrink: 0; /* Prevent shrinking */
+}
+
+.movie-poster img {
+    height: 450px;
+    margin-right: 30px;
+    border-radius: 5px 0 0 5px;
+    object-fit: cover; /* Ensure image covers the area */
+}
+
+.movie-container.noBackground {
+    background: none; /* Ensure background is white */
+    box-shadow: none; /* Remove background from movie-container */
+}
+
+footer {
+    text-align: center;
+    background: #232f3e;
+    color: #f4f4f4;
+    padding-block: 20px;
+    margin-top: 40px;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 950px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items vertically */
+        padding: 10px;
+    }
+
+    .search-container input, .search-container button {
+        width: 100%; /* Full width for input and button */
+        margin-bottom: 10px; /* Add margin between input and button */
+    }
+
+    .search-container button {
+        border-radius: 4px; /* Rounded corners for button */
+    }
+
+    .movie-container {
+        flex-direction: column; /* Change direction to column */
+        width: 90%;
+    }
+
+    .movie-poster img {
+        margin-right: 0;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .movie-info {
+        padding: 15px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .navbar {
+        padding: 5px;
+    }
+
+    .search-container input, .search-container button {
+        font-size: 14px; /* Smaller font size */
+        padding: 8px 10px; /* Smaller padding */
+    }
+
+    .movie-info h2 {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    .movie-info p {
+        font-size: 16px; /* Smaller font size */
+    }
+
+    .movie-info .movie-genre p {
+        font-size: 14px; /* Smaller font size */
+        padding: 3px 8px; /* Smaller padding */
+    }
+
+    .movie-poster img {
+        height: 300px; /* Smaller height */
+    }
+}
